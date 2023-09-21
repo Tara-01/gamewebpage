@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+animation:shakebody linear .6s infinite;
+
+}
+.sky{
+    height:100vh;
+    width: 300vh; 
+    
+    /* width: 100%; */
+    
+   background-image: url(background.png);
+position:absolute ;
+background-repeat: no-repeat ;
+/* animation: carMove linear .3s infinite; */
+
+}
+.tree{
+    height:100vh;
+    width: 300vh;  
+    /* width: 100vh;   */
+    background-image: url(trees.png);
+position: absolute;
+background-size: cover;
+/* top: -40vh; */
+top:-144px;
+/* animation: carMove linear .3s infinite; */
+
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    /* background-size: cover; */
+    background-repeat: repeat-x;
+position: absolute;
+top: 78vh;
+animation: carMove linear .3s infinite;
+
+}
+.car{
+    height: 8vh;
+    width: 33vh;
+    /* height: 100px;  width: 380px; */
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    /* left: 100vh; */
+    left: 10vh;
+    bottom:10vh;
+    animation: shake linear .6s infinite;
+    /* animation: carMove linear .3s infinite; */
+
+
+}
+.wheel{
+
+}
+.wheel1 img{
+/* width: 20vh; */
+width: 6vh;
+position: relative;
+top: 3.5vh;
+left: 4vh;
+/* top: 41px; 
+left: 43px; */
+animation: wheelRotation linear .3s infinite;
+}
+.wheel2 img{
+    /* width: 10vh; */
+    width:6vh;
+    position: relative;
+    top: -3vh;
+    left: 20.7vh;
+    /* top: -40px; 
+     left: 234px; */
+animation: wheelRotation linear .6s infinite;
+    
+}
+
+@keyframes wheelRotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes carMove{
+    100%{
+        transform: translatex(-500vw);
+    }
+}
+@keyframes shake{
+    0%{
+        transform: translatex(-1vh);
+    }
+    50%{
+        transform: translatex(1vh);
+    }
+    100%{
+        transform: translatex(-1vh);
+    }
+}
+@keyframes shakebody{
+    0%{
+        transform: translatey(-1vh);
+    }
+    50%{
+        transform: translatey(1vh);
+    }
+    100%{
+        transform: translatey(-1vh);
+    }
+}
